@@ -9,7 +9,8 @@ from .models import Cali
 
 
 # Create your views here.
-class CaliListView(APIView):
+class AllCaliClassView(APIView):
+    # Endpoint ''/api/cali/' path
     def get(self, request):
         # print('GET /api/cali/ endpoint hit')
         cali = Cali.objects.all()
