@@ -28,3 +28,11 @@ class RegisterView(APIView):
         user_to_add.is_valid(raise_exception=True)
         user_to_add.save()
         return Response(user_to_add.data, status.HTTP_201_CREATED)
+
+
+class LoginView(APIView):
+    # Login Route
+    # Endpoint: api/auth/login/
+    def post(self, request):
+        print(request.data)
+        return Response('HIT LOGIN ROUTE')
