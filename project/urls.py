@@ -22,5 +22,5 @@ urlpatterns = [
     path('api/cali/', include('cali.urls')),
     path('api/booking/', include('booking.urls')),
     # path('api/instructor/', include('instructor.urls'))
-    # path('api/auth/', include('users.urls'))
+    path('api/auth/', include('users.urls'))
 ]
