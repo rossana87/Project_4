@@ -16,3 +16,11 @@ class AllCaliClassView(APIView):
         cali = Cali.objects.all()
         serialized_cali = CaliSerializer(cali, many=True)
         return Response(serialized_cali.data)
+
+
+# View is for /api/cali/:pk
+class CaliClassDetailView(APIView):
+    def get(self, request, pk):
+        cali = Cali.objects.get(pk=pk)
+        serialized_cali = CaliSerializer(cali)
+        return Response(serialized_cali.data)
