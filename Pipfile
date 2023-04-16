@@ -8,6 +8,8 @@ django = "*"
 pylint = "*"
 psycopg2-binary = "*"
 autopep8 = "*"
+pyjwt = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
