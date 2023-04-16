@@ -33,6 +33,23 @@ class RegisterView(APIView):
 class LoginView(APIView):
     # Login Route
     # Endpoint: api/auth/login/
+    @exceptions
     def post(self, request):
-        print(request.data)
-        return Response('HIT LOGIN ROUTE')
+        # print(request.data)
+        email = request.data['email']
+        password = request.data['password']
+        user_to_login = User.objects.get(email=email)
+        # If the user is found, we want to check the password matches the hash we have in our database
+        if not user_to_login.check_password(password):
+            print('PASSWORDS DONT MATCH')
+            raise PermissionDenied('Unauthorized')
+
+        # At this point the user is validated, so we can send the token back
+        dt = datetime.now() + timedelta(days=7)
+
+        token = jwt.encode(
+            {'sub':  user_to_login.id, 'exp': int(dt.strftime('%s'))},
+            settings.SECRET_KEY,
+            algorithm='HS256')
+        print('TOKEN ->', token)
+        return Response({'message': f"Welcome back, {user_to_login.username}", 'token': token})
