@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticate
 from lib.exceptions import exceptions
 #  used to convert the data into a python data type
 from .serializers.common import CaliSerializer
+from .serializers.populated import PopulatedCaliSerializer
 # used to query the data
 from .models import Cali
 
@@ -19,7 +20,7 @@ class AllCaliClassView(APIView):
     def get(self, request):
         # print('GET /api/cali/ endpoint hit')
         cali = Cali.objects.all()
-        serialized_cali = CaliSerializer(cali, many=True)
+        serialized_cali = PopulatedCaliSerializer(cali, many=True)
         return Response(serialized_cali.data)
 
 

@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 #  used to convert the data into a python data type
 from .serializers.common import BookingSerializer
+from .serializers.populated import PopulatedBookingSerializer, PopulatedUserBookingSerializer
 # used to query the data
 from .models import Booking
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
@@ -19,7 +20,7 @@ class BookedClassesView(APIView):
     @exceptions
     def get(self, request):
         booking = Booking.objects.all()
-        serializer_booking = BookingSerializer(booking, many=True)
+        serializer_booking = PopulatedBookingSerializer(booking, many=True)
         return Response(serializer_booking.data)
 
     @exceptions
@@ -36,11 +37,13 @@ class BookedClassDetailView(APIView):
 
     # Endpoint ''/api/booking/pk/'
     # Get single booking
+    @exceptions
     def get(self, request, pk):
         booked_class = Booking.objects.get(pk=pk)
         serializer_booking = BookingSerializer(booked_class)
         return Response(serializer_booking.data)
 
+    @exceptions
     def delete(self, request, pk):
         booked_class = Booking.objects.get(pk=pk)
         booked_class.delete()
