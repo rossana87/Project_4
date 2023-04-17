@@ -15,16 +15,33 @@ from lib.exceptions import exceptions
 class BookedClassesView(APIView):
     permission_classes = (IsAuthenticated,)
 
-    # @exceptions
-    # def get(self, request):
-    #     booking = Booking.objects.all()
-    #     serializer_class = BookingSerializer(booking, many=True)
-    #     return Response(serializer_class.data)
+    # Endpoint ''/api/booking/'
+    @exceptions
+    def get(self, request):
+        booking = Booking.objects.all()
+        serializer_class = BookingSerializer(booking, many=True)
+        return Response(serializer_class.data)
 
     @exceptions
     def post(self, request):
-        request.data['user_id'] = request.user.id
-        booked_class = BookingSerializer(data=request.data)
-        if booked_class.is_valid():
-            booked_class.save()
-        return Response(booked_class.data, status.HTTP_202_ACCEPTED)
+        booked_class = BookingSerializer(
+            data={**request.data, 'user_id': request.user.id})
+        booked_class.is_valid(raise_exception=True)
+        booked_class.save()
+        return Response(booked_class.data, status=status.HTTP_202_ACCEPTED)
+
+
+class BookedClassDetailView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    # Endpoint ''/api/booking/pk/'
+    # Get single booking
+    def get(self, request, pk):
+        booked_class = Booking.objects.get(pk=pk)
+        serializer = BookingSerializer(booked_class)
+        return Response(serializer.data)
+
+    def delete(self, request, pk):
+        booked_class = Booking.objects.get(pk=pk)
+        booked_class.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
