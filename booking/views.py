@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 #  used to convert the data into a python data type
 from .serializers.common import BookingSerializer
-from .serializers.populated import PopulatedBookingSerializer, PopulatedUserBookingSerializer
+from .serializers.populated import PopulatedBookingSerializer
 # used to query the data
 from .models import Booking
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
@@ -35,7 +35,7 @@ class BookedClassesView(APIView):
 class BookedClassDetailView(APIView):
     permission_classes = (IsAuthenticated,)
 
-    # Endpoint ''/api/booking/pk/'
+    # Endpoint '/api/booking/pk/'
     # Get single booking
     @exceptions
     def get(self, request, pk):
