@@ -64,10 +64,10 @@ class ProfileView(APIView):
     permission_classes = (IsAuthenticated, )
     # Endpoint '/api/auth/allusers'
 
-    # @exceptions
     # def get(self, request):
     #     # print('GET /api/cali/ endpoint hit')
     #     user = User.objects.all()
+    #     print(user)
     #     serialized_user = UserSerializer(user, many=True)
     #     return Response(serialized_user.data)
 
