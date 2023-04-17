@@ -6,7 +6,12 @@ from rest_framework import status
 from rest_framework.exceptions import PermissionDenied
 import jwt
 from datetime import datetime, timedelta
+from rest_framework.permissions import IsAuthenticated
 from django.conf import settings
+from .serializers.populated import PopulatedUserSerializer
+from booking.models import Booking
+from cali.serializers.common import CaliSerializer
+from users.models import User
 
 from lib.exceptions import exceptions
 
@@ -53,3 +58,25 @@ class LoginView(APIView):
             algorithm='HS256')
         print('TOKEN ->', token)
         return Response({'message': f"Welcome back, {user_to_login.username}", 'token': token})
+
+
+class ProfileView(APIView):
+    permission_classes = (IsAuthenticated, )
+    # Endpoint '/api/auth/profile'
+
+    def get(self, request):
+        user = User.objects.get(pk=request.user.id)
+        bookings = Booking.objects.filter(user_id=user.id)
+        cali_classes = [booking.cali for booking in bookings]
+        serialized_user = PopulatedUserSerializer(user)
+        serialized_cali_classes = CaliSerializer(cali_classes, many=True)
+        data = {
+            'user': serialized_user.data,
+            'cali_classes': serialized_cali_classes.data
+        }
+        return Response(data)
+
+
+class ProfileDetailView(APIView):
+    permission_classes = (IsAuthenticated, )
+    # Endpoint '/api/auth/profile/pk/'
