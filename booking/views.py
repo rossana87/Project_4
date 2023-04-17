@@ -19,8 +19,8 @@ class BookedClassesView(APIView):
     @exceptions
     def get(self, request):
         booking = Booking.objects.all()
-        serializer_class = BookingSerializer(booking, many=True)
-        return Response(serializer_class.data)
+        serializer_booking = BookingSerializer(booking, many=True)
+        return Response(serializer_booking.data)
 
     @exceptions
     def post(self, request):
@@ -38,8 +38,8 @@ class BookedClassDetailView(APIView):
     # Get single booking
     def get(self, request, pk):
         booked_class = Booking.objects.get(pk=pk)
-        serializer = BookingSerializer(booked_class)
-        return Response(serializer.data)
+        serializer_booking = BookingSerializer(booked_class)
+        return Response(serializer_booking.data)
 
     def delete(self, request, pk):
         booked_class = Booking.objects.get(pk=pk)
