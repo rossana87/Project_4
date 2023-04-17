@@ -1,0 +1,470 @@
+[
+{
+  "model": "cali.cali",
+  "pk": 4,
+  "fields": {
+    "name_class": "Mobility Kulture-Hips",
+    "studio": "3",
+    "time_class": "06:45:00",
+    "date_class": "2023-04-24",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 5,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "08:00:00",
+    "date_class": "2023-04-24",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 6,
+  "fields": {
+    "name_class": "Mobility Kulture",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-24",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 7,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "11:45:00",
+    "date_class": "2023-04-24",
+    "duration_class": "1 hour",
+    "instructor": 4,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 8,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "19:15:00",
+    "date_class": "2023-04-24",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 9,
+  "fields": {
+    "name_class": "Mobility Kulture-Shoulders",
+    "studio": "3",
+    "time_class": "06:45:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 10,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 3,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 11,
+  "fields": {
+    "name_class": "Beginner Handstands",
+    "studio": "3",
+    "time_class": "11:45:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 12,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "13:00:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 13,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "17:30:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 14,
+  "fields": {
+    "name_class": "Advanced Calisthenics",
+    "studio": "3",
+    "time_class": "18:30:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 15,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "19:45:00",
+    "date_class": "2023-04-25",
+    "duration_class": "1 hour",
+    "instructor": 4,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 16,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "06:45:00",
+    "date_class": "2023-04-26",
+    "duration_class": "1 hour",
+    "instructor": 3,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 17,
+  "fields": {
+    "name_class": "Mobility Kulture-Hips",
+    "studio": "3",
+    "time_class": "08:00:00",
+    "date_class": "2023-04-26",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 18,
+  "fields": {
+    "name_class": "Squat Kulture - Beginner",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-26",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 19,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "11:45:00",
+    "date_class": "2023-04-26",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 20,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "19:15:00",
+    "date_class": "2023-04-26",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 21,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "06:45:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 4,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 22,
+  "fields": {
+    "name_class": "Beginner Handstands",
+    "studio": "3",
+    "time_class": "08:00:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 23,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 3,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 24,
+  "fields": {
+    "name_class": "Mobility Kulture-Shoulders",
+    "studio": "3",
+    "time_class": "11:30:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 25,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "17:30:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 26,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "19:00:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 3,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 27,
+  "fields": {
+    "name_class": "Advanced Calisthenics",
+    "studio": "3",
+    "time_class": "20:15:00",
+    "date_class": "2023-04-27",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 28,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "06:45:00",
+    "date_class": "2023-04-28",
+    "duration_class": "1 hour",
+    "instructor": 3,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 29,
+  "fields": {
+    "name_class": "Squat Kulture - Beginner",
+    "studio": "3",
+    "time_class": "08:00:00",
+    "date_class": "2023-04-28",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 30,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-28",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 31,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "11:45:00",
+    "date_class": "2023-04-28",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 32,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "09:00:00",
+    "date_class": "2023-04-29",
+    "duration_class": "1 hour",
+    "instructor": 5,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 33,
+  "fields": {
+    "name_class": "Squat Kulture - Advanced",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-29",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 34,
+  "fields": {
+    "name_class": "Intermediate Calisthenics",
+    "studio": "3",
+    "time_class": "11:30:00",
+    "date_class": "2023-04-29",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 35,
+  "fields": {
+    "name_class": "Advanced Calisthenics",
+    "studio": "3",
+    "time_class": "12:30:00",
+    "date_class": "2023-04-29",
+    "duration_class": "1 hour",
+    "instructor": 1,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 36,
+  "fields": {
+    "name_class": "Beginner Handstands",
+    "studio": "3",
+    "time_class": "09:00:00",
+    "date_class": "2023-04-30",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 37,
+  "fields": {
+    "name_class": "Mobility Kulture",
+    "studio": "3",
+    "time_class": "10:15:00",
+    "date_class": "2023-04-30",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 38,
+  "fields": {
+    "name_class": "Squat Kulture - Beginner",
+    "studio": "3",
+    "time_class": "11:30:00",
+    "date_class": "2023-04-30",
+    "duration_class": "1 hour",
+    "instructor": 2,
+    "owner": 1
+  }
+},
+{
+  "model": "cali.cali",
+  "pk": 39,
+  "fields": {
+    "name_class": "Beginner Calisthenics",
+    "studio": "3",
+    "time_class": "12:45:00",
+    "date_class": "2023-04-30",
+    "duration_class": "1 hour",
+    "instructor": 4,
+    "owner": 1
+  }
+}
+]

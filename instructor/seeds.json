@@ -1,0 +1,42 @@
+[
+{
+  "model": "instructor.instructor",
+  "pk": 1,
+  "fields": {
+    "instructor_name": "Jermaine",
+    "profile_image": "https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681546139/Project%204/Jermaine_fby5uw.webp"
+  }
+},
+{
+  "model": "instructor.instructor",
+  "pk": 2,
+  "fields": {
+    "instructor_name": "Lucy",
+    "profile_image": "https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681494418/Project%204/Lucy2_wrff2f.webp"
+  }
+},
+{
+  "model": "instructor.instructor",
+  "pk": 3,
+  "fields": {
+    "instructor_name": "Kelly",
+    "profile_image": "https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681546121/Project%204/Kelly2_qnuycm.webp"
+  }
+},
+{
+  "model": "instructor.instructor",
+  "pk": 4,
+  "fields": {
+    "instructor_name": "Sobhan",
+    "profile_image": "https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681546130/Project%204/Sobs2_yesacl.webp"
+  }
+},
+{
+  "model": "instructor.instructor",
+  "pk": 5,
+  "fields": {
+    "instructor_name": "Anna",
+    "profile_image": "https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681546115/Project%204/Anna_u1ogyp.webp"
+  }
+}
+]
