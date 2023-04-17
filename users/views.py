@@ -62,8 +62,17 @@ class LoginView(APIView):
 
 class ProfileView(APIView):
     permission_classes = (IsAuthenticated, )
-    # Endpoint '/api/auth/profile'
+    # Endpoint '/api/auth/allusers'
 
+    # @exceptions
+    # def get(self, request):
+    #     # print('GET /api/cali/ endpoint hit')
+    #     user = User.objects.all()
+    #     serialized_user = UserSerializer(user, many=True)
+    #     return Response(serialized_user.data)
+
+    # With this function, I am getting all the classes that one user has booked
+    @exceptions
     def get(self, request):
         user = User.objects.get(pk=request.user.id)
         bookings = Booking.objects.filter(user_id=user.id)
@@ -80,3 +89,30 @@ class ProfileView(APIView):
 class ProfileDetailView(APIView):
     permission_classes = (IsAuthenticated, )
     # Endpoint '/api/auth/profile/pk/'
+
+    # @exceptions
+    # def put(self, request, pk):
+    #     user_details = User.objects.get(pk=pk)
+    #     serialized_user_detail = UserSerializer(
+    #         instance=user_details, data=request.data, partial=True)
+    #     print('REQUEST DATA ->', request.data)
+    #     serialized_user_detail.is_valid(raise_exception=True)
+    #     serialized_user_detail.save()
+    #     return Response(serialized_user_detail.data)
+
+    @exceptions
+    def put(self, request, *args, **kwargs):
+        user = request.user
+        first_name = request.data.get('first_name', None)
+        last_name = request.data.get('last_name', None)
+
+        if not first_name and not last_name:
+            return Response({'message': 'No updates provided.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        if first_name:
+            user.first_name = first_name
+        if last_name:
+            user.last_name = last_name
+
+        user.save()
+        return Response({'message': 'User updated successfully.'}, status=status.HTTP_200_OK)
