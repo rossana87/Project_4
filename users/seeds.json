@@ -1,0 +1,110 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$UNDHOvS2qd1keXob6WAyro$DlNcbOVh8gmWs6H+8g5tAZiPh9d1EJS8RuInrdDnato=",
+    "last_login": "2023-04-16T08:58:09.379Z",
+    "is_superuser": true,
+    "username": "admin",
+    "is_active": true,
+    "date_joined": "2023-04-16T08:56:08.986Z",
+    "email": "admin@email.com",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "jermaine",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jermaine",
+    "is_active": true,
+    "date_joined": "2023-04-16T09:05:47Z",
+    "email": "jermaine@email.com",
+    "first_name": "Jermaine",
+    "last_name": "Strength",
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "lucy",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lucy",
+    "is_active": true,
+    "date_joined": "2023-04-16T09:06:26Z",
+    "email": "lucy@email.com",
+    "first_name": "Lucy",
+    "last_name": "Joslin",
+    "is_staff": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "elsa",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Elsa",
+    "is_active": true,
+    "date_joined": "2023-04-16T11:09:53Z",
+    "email": "elsa@email.com",
+    "first_name": "Elsa",
+    "last_name": "Corcione",
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$AN9oAWDS6dKirZwSVZIHes$EtitN4Tpv5vIm+hZ9lilRYu3EF3ctDxhPFb2bHYH3Lg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Seb",
+    "is_active": true,
+    "date_joined": "2023-04-16T16:06:56.795Z",
+    "email": "seb@email.com",
+    "first_name": "Seb",
+    "last_name": "Corcione",
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$djsttrGdgsL3lQC1cWmqpG$VHprJRzaLAKvJ0Macmg4DRHs7aKv4T4HQOsNdON1wyk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Rosie",
+    "is_active": true,
+    "date_joined": "2023-04-16T16:08:59.666Z",
+    "email": "rosie@email.com",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
