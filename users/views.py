@@ -90,16 +90,6 @@ class ProfileDetailView(APIView):
     permission_classes = (IsAuthenticated, )
     # Endpoint '/api/auth/profile/pk/'
 
-    # @exceptions
-    # def put(self, request, pk):
-    #     user_details = User.objects.get(pk=pk)
-    #     serialized_user_detail = UserSerializer(
-    #         instance=user_details, data=request.data, partial=True)
-    #     print('REQUEST DATA ->', request.data)
-    #     serialized_user_detail.is_valid(raise_exception=True)
-    #     serialized_user_detail.save()
-    #     return Response(serialized_user_detail.data)
-
     @exceptions
     def put(self, request, *args, **kwargs):
         user = request.user
