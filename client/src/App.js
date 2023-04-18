@@ -1,5 +1,14 @@
 import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import axios from 'axios'
+
+// Components
+import Home from './components/Home'
+
+
+
+
+
 
 const App = () => {
   useEffect(() => {
