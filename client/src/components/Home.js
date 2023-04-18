@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
+
 
 const Home = () => {
   return (
     <main className="home">
       <div className="hero">
-        <h1 className='display-3'>Cali-Kulture</h1>
-        <p className='lead'>xxxxx</p>
-        <Button to="/bread" as={Link} className='btn-brown'>Discover Cali-Kulture</Button>
+        <Image className="cali-top-image" src="https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681827782/Project%204/cali-top-image_hr9njl.webp" alt="Cali-Team" />
+        <div className="container-header">
+          <div className="header">Cali Kulture is a London based Calisthenics community and academy, offering adult and children classes, workshops and competitions.
+          </div>
+        </div>
       </div>
     </main>
   )

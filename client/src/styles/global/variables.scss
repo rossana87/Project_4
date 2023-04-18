@@ -1,0 +1,9 @@
+$primary: rgb(179, 179, 179);
+$bg: white;
+$text: #524f4f;
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

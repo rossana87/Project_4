@@ -1,0 +1,22 @@
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2em 0;
+  background-color: $bg;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: $text;
+}
