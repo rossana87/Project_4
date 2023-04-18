@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap");
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2em 0;
+  background-color: white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #3e3939;
+}
+
+#cali-top-image {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-size: contain;
+  background-position: center;
+  max-width: 100%;
+}
+
+.containerNavBar {
+  display: flex;
+}
+
+.container-header {
+  margin-top: 50px;
+}
+
+.header {
+  font-size: 15px;
+  line-height: 1.2em;
+  text-align: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-justify: inter-word;
+}
+
+.register-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.register-page .form-container {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+.register-page .form-container h1 {
+  text-align: center;
+}
+.register-page .form-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+.register-page .form-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.register-page .form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.register-page .form-container .text-danger {
+  color: red;
+}
+.register-page .image-register {
+  flex-basis: 50%;
+  max-width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* {
+  box-sizing: border-box;
+}/*# sourceMappingURL=main.css.map */

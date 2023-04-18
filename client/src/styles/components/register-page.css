@@ -1,0 +1,25 @@
+.register-page {
+  display: flex;
+}
+.register-page .form-wrapper {
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681851244/Project%204/Lucy6_w1wprp.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+}
+.register-page form {
+  border-radius: 8px;
+  padding: 20px;
+}
+.register-page form label {
+  display: block;
+}
+.register-page form input,
+.register-page form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}/*# sourceMappingURL=register-page.css.map */

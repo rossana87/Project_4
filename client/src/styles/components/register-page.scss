@@ -1,0 +1,35 @@
+.register-page {
+  // background-image: url('https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681851244/Project%204/Lucy6_w1wprp.jpg');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // width: 50%;
+  display: flex;
+
+  .form-wrapper {
+    align-items: center;
+    background-image: url('https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681851244/Project%204/Lucy6_w1wprp.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+  }
+
+  form {
+    border-radius: 8px;
+    padding: 20px;
+
+    label {
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 5px;
+    }
+  }
+
+}
