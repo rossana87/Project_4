@@ -32,22 +32,23 @@ const PageNavbar = () => {
       <Container>
         <Navbar.Brand to="/" as={Link} className='logo'><img src={Logo} /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'></Navbar.Collapse>
-        <Nav>
-          <Nav.Link to="/" as={Link} className={location.pathname === '/' ? 'active' : ''}>Home</Nav.Link>
-          <Nav.Link to="/classes" as={Link} className={location.pathname === '/classes' ? 'active' : ''}>Classes</Nav.Link>
-          {isAuthenticated() ?
-            <>
-              <Nav.Link to="/profile/:profileId" as={Link} className={location.pathname === '/profile/:profileId' ? 'active' : ''}>Profile</Nav.Link>
-              <span className='nav-link' onClick={handleLogOut}>Log out</span>
-            </>
-            :
-            <>
-              <Nav.Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}>Register</Nav.Link>
-              <Nav.Link to="/login" as={Link} className={location.pathname === '/login' ? 'active' : ''}>Login</Nav.Link>
-            </>
-          }
-        </Nav>
+        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
+          <Nav>
+            <Nav.Link to="/" as={Link} className={location.pathname === '/' ? 'active' : ''}>Home</Nav.Link>
+            <Nav.Link to="/classes" as={Link} className={location.pathname === '/classes' ? 'active' : ''}>Classes</Nav.Link>
+            {isAuthenticated() ?
+              <>
+                <Nav.Link to="/profile/:profileId" as={Link} className={location.pathname === '/profile/:profileId' ? 'active' : ''}>Profile</Nav.Link>
+                <span className='nav-link' onClick={handleLogOut}>Log out</span>
+              </>
+              :
+              <>
+                <Nav.Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}>Register</Nav.Link>
+                <Nav.Link to="/login" as={Link} className={location.pathname === '/login' ? 'active' : ''}>Login</Nav.Link>
+              </>
+            }
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   )
