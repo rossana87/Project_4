@@ -28,12 +28,6 @@ const App = () => {
           {/* This is best used on a 404 page */}
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-
-
-
-
-
-
       </BrowserRouter>
     </div>
   )
