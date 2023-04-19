@@ -18,7 +18,7 @@ const PageNavbar = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    console.log('LOCATION ->', location)
+    // console.log('LOCATION ->', location)
   }, [location])
 
   const handleLogOut = () => {
