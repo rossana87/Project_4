@@ -54,22 +54,22 @@ const Register = () => {
               <h1 className='display-6 text-center'>Register</h1>
               {/* Username */}
               <label htmlFor="username">Username</label>
-              <input type="text" name="username" placeholder='Username' onChange={handleChange} value={formFields.username} />
+              <input type="text" name="username" onChange={handleChange} value={formFields.username} />
               {/* First Name */}
               <label htmlFor="first_name">First Name</label>
-              <input type="text" name="first_name" placeholder='First Name' onChange={handleChange} value={formFields.first_name} />
+              <input type="text" name="first_name" onChange={handleChange} value={formFields.first_name} />
               {/* Last Name */}
               <label htmlFor="last_name">Last Name</label>
-              <input type="text" name="last_name" placeholder='Last Name' onChange={handleChange} value={formFields.last_name} />
+              <input type="text" name="last_name" onChange={handleChange} value={formFields.last_name} />
               {/* Email */}
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" placeholder='Email' onChange={handleChange} value={formFields.email} />
+              <input type="email" name="email" onChange={handleChange} value={formFields.email} />
               {/* Password */}
               <label htmlFor="password">Password</label>
-              <input type="password" name="password" placeholder='Password' onChange={handleChange} value={formFields.password} />
+              <input type="password" name="password" onChange={handleChange} value={formFields.password} />
               {/* Password Confirmation */}
               <label htmlFor="passwordConfirmation">Password Confirmation</label>
-              <input type="password" name="password_confirmation" placeholder='Password Confirmation' onChange={handleChange} value={formFields.password_confirmation} />
+              <input type="password" name="password_confirmation" onChange={handleChange} value={formFields.password_confirmation} />
               {/* Submit */}
               <button className='btn btn-brown w-100 mb-4'>Sign Up</button>
               {/* Error */}
