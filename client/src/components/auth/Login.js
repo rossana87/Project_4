@@ -29,7 +29,9 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('api/auth/login/', formFields)
+      const { data } = await axios.post('api/auth/login/', formFields)
+      console.log(data)
+      localStorage.setItem('CALI-KULTURE-2022', data.token)
       // Navigate to the classes page
       navigate('/')
     } catch (err) {

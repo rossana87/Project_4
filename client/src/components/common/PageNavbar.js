@@ -11,14 +11,14 @@ import Logo from '../../images/logo.jpg'
 import { isAuthenticated, removeToken } from '../../helpers/auth'
 
 const PageNavbar = () => {
-
+  console.log('isAuthenticated ->', isAuthenticated())
 
   // ! Location variables
   const location = useLocation()
   const navigate = useNavigate()
 
   useEffect(() => {
-    // console.log(location)
+    console.log('LOCATION ->', location)
   }, [location])
 
   const handleLogOut = () => {
@@ -36,10 +36,11 @@ const PageNavbar = () => {
           <Nav>
             <Nav.Link to="/" as={Link} className={location.pathname === '/' ? 'active' : ''}>Home</Nav.Link>
             <Nav.Link to="/classes" as={Link} className={location.pathname === '/classes' ? 'active' : ''}>Classes</Nav.Link>
+            {/* check if authenticated. if true, show logout and profile, otherwise show login and register links */}
             {isAuthenticated() ?
               <>
-                <Nav.Link to="/profile/:profileId" as={Link} className={location.pathname === '/profile/:profileId' ? 'active' : ''}>Profile</Nav.Link>
-                <span className='nav-link' onClick={handleLogOut}>Log out</span>
+                <Nav.Link to="/profile" as={Link} className={location.pathname === '/profile' ? 'active' : ''}>Profile</Nav.Link>
+                <span className='nav-link' onClick={handleLogOut}>Logout</span>
               </>
               :
               <>

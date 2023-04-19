@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.25.0",
+    "base-64": "^1.0.0",
     "bootstrap": "^5.2.3",
     "buffer": "^6.0.3",
     "eslint-plugin-react": "^7.32.2",

@@ -37,8 +37,8 @@ const Register = () => {
     e.preventDefault()
     try {
       await axios.post('api/auth/register/', formFields)
-      // // Navigate to the login page
-      // navigate('/login')
+      // Navigate to the login page
+      navigate('/login')
     } catch (err) {
       console.log('error', err)
       setError(err.response.data.message)
