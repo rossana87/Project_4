@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // Components
 import Home from './components/Home'
-import ClassesIndex from './components/cali/ClassesIndex'
+import Classes from './components/cali/Classes'
 import PageNavbar from './components/common/PageNavbar'
 import PageNotFound from './components/common/PageNotFound'
 import Profile from './components/profile/Profile'
@@ -27,7 +27,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/classes" element={<ClassesIndex />} />
+          <Route path="/classes" element={<Classes />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

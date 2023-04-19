@@ -11,7 +11,7 @@ import Logo from '../../images/logo.jpg'
 import { isAuthenticated, removeToken } from '../../helpers/auth'
 
 const PageNavbar = () => {
-  console.log('isAuthenticated ->', isAuthenticated())
+  // console.log('isAuthenticated ->', isAuthenticated())
 
   // ! Location variables
   const location = useLocation()

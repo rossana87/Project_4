@@ -30,7 +30,7 @@ const Login = () => {
     e.preventDefault()
     try {
       const { data } = await axios.post('api/auth/login/', formFields)
-      console.log(data)
+      // console.log(data)
       localStorage.setItem('CALI-KULTURE-2022', data.token)
       // Navigate to the classes page
       navigate('/')

@@ -28,9 +28,9 @@ const Register = () => {
   // ! Executions
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value })
-    console.log('TARGET NAME -> ', e.target.name)
-    console.log('VALUE -> ', e.target.value)
-    console.log('FORMFIELDS ->', formFields.password_confirmation)
+    // console.log('TARGET NAME -> ', e.target.name)
+    // console.log('VALUE -> ', e.target.value)
+    // console.log('FORMFIELDS ->', formFields.password_confirmation)
     setError('')
   }
   const handleSubmit = async (e) => {
