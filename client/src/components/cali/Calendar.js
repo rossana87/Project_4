@@ -28,7 +28,7 @@ const Calendar = () => {
         const response = await axios.get('/api/cali/')
         setDate(response.data.filter((item, index, arr) => arr.findIndex(t => t.date_class === item.date_class) === index))
         setBookings(response.data)
-        console.log(response.data[0].name_class)
+        // console.log(response.data[0].name_class)
         // console.log(response.data[0].instructor.instructor_name)
         // console.log(response.data[0].instructor.profile_image)
       } catch (err) {
@@ -52,27 +52,28 @@ const Calendar = () => {
       <div className="calendar">
         {date && date.map((item, i) => (
           <div key={i}>
-            <Button variant="light" onClick={() => handleButtonChange(item.date_class)}>{format(new Date(item.date_class), 'iiii do yyyy')}</Button>
+            <Button variant="light" onClick={() => handleButtonChange(item.date_class)}>{format(new Date(item.date_class), 'MMMM do yyyy')}</Button>
           </div>
         ))}
       </div>
       <div>
         {filteredBookings.length > 0 ?
           filteredBookings.map((booking, i) => {
-            const { nameClass, instructor, studio, timeClass } = booking
+            const { name_class, instructor, studio, time_class } = booking
             return (
               <div key={i}>
-                <h5>Name Class:{nameClass}</h5>
-                <p>Instructor: {instructor.instructor_name}</p>
-                <p>Studio: {studio}</p>
-                <p>Time: {timeClass}</p>
                 <div>
                   <img src={instructor.profile_image} alt={instructor.instructor_name} />
                 </div>
+                <p>Class: {name_class}</p>
+                <p>Instructor: {instructor.instructor_name}</p>
+                <p>Studio: {studio}</p>
+
+                <p>Time: {time_class}</p>
               </div>
             )
           }) :
-          <p>No bookings found for selected date.</p>
+          <p>No bookings found for this date.</p>
         }
       </div>
     </main>

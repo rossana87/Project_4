@@ -23,7 +23,7 @@
   "rules": {
     "brace-style": "error",
     "camelcase": [
-      "error",
+      "off",
       {
         "properties": "never"
       }
