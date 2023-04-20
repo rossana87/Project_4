@@ -12,13 +12,6 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 
 const App = () => {
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const { data } = await axios.get('/api/cali/') // * <-- replace with your endpoint
-  //     console.log(data)
-  //   }
-  //   getData()
-  // })
 
   return (
     <div className='site-wrapper'>

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
+
 
 const Register = () => {
 
@@ -36,7 +36,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('api/auth/register/', formFields)
+      await axios.post('/api/auth/register/', formFields)
       // Navigate to the login page
       navigate('/login')
     } catch (err) {
