@@ -1,18 +1,8 @@
-import { Link } from 'react-router-dom'
+
 import Image from 'react-bootstrap/Image'
 import Calendar from './Calendar'
 
 const Classes = () => {
-
-
-
-
-
-
-
-
-
-
 
 
   return (

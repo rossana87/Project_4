@@ -1,5 +1,43 @@
 .calendar {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
 
+  .button-calendar {
+    margin-right: 5px;
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+
+  .card-body {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-image {
+    display: inline-block;
+    max-width: 90%;
+    padding-left: 0px;
+  }
+
+  .button,
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .no-booking {
+    display: block;
+    margin: 0 auto;
+  }
 }

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { format, parseISO } from 'date-fns'
 import { Link } from 'react-router-dom'
+import { isAuthenticated } from '../../helpers/auth'
 
 
 //Bootstrap Components
@@ -21,6 +22,7 @@ const Calendar = () => {
   const [filteredBookings, setFilteredBookings] = useState([])
   const [error, setError] = useState('')
 
+
   // ! On Mount
   useEffect(() => {
     const getDate = async () => {
@@ -39,6 +41,7 @@ const Calendar = () => {
     getDate()
   }, [])
 
+
   const handleButtonChange = (date) => {
     // Filter the bookings array to only include bookings for the selected date
     const filteredBookings = bookings.filter((booking) => booking.date_class === date)
@@ -52,28 +55,39 @@ const Calendar = () => {
       <div className="calendar">
         {date && date.map((item, i) => (
           <div key={i}>
-            <Button variant="light" onClick={() => handleButtonChange(item.date_class)}>{format(new Date(item.date_class), 'MMMM do yyyy')}</Button>
+            <Button variant="light" className="button-calendar" onClick={() => handleButtonChange(item.date_class)}>{format(new Date(item.date_class), 'MMMM do yyyy')}</Button>
           </div>
         ))}
       </div>
-      <div>
+      <div className="card-container">
         {filteredBookings.length > 0 ?
           filteredBookings.map((booking, i) => {
             const { name_class, instructor, studio, time_class } = booking
             return (
-              <div key={i}>
-                <div>
+              <div key={i} className="card flex-row mb-3">
+                <div className="card-image">
                   <img src={instructor.profile_image} alt={instructor.instructor_name} />
                 </div>
-                <p>Class: {name_class}</p>
-                <p>Instructor: {instructor.instructor_name}</p>
-                <p>Studio: {studio}</p>
-
-                <p>Time: {time_class}</p>
+                <div className="card-body d-flex flex-column">
+                  <p className="card-title">Class: {name_class}</p>
+                  <p className="card-text">Instructor: {instructor.instructor_name}</p>
+                  <p className="card-text">Studio: {studio}</p>
+                  <p className="card-text">Time: {time_class}</p>
+                </div>
+                {/* check if authenticated. if true, show the button book, otherwise show nothing */}
+                {isAuthenticated() ?
+                  <>
+                    <div className="button">
+                      <Button className="btn btn-primary">Book</Button>
+                    </div>
+                  </>
+                  :
+                  <Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}>Register to Book</Link>
+                }
               </div>
             )
           }) :
-          <p>No bookings found for this date.</p>
+          <p className="no-booking">No bookings found for this date.</p>
         }
       </div>
     </main>
