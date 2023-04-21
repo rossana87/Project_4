@@ -23,6 +23,7 @@ class BookedClassesView(APIView):
         serializer_booking = PopulatedBookingSerializer(booking, many=True)
         return Response(serializer_booking.data)
 
+    # Book a class
     @exceptions
     def post(self, request):
         booked_class = BookingSerializer(
@@ -43,6 +44,7 @@ class BookedClassDetailView(APIView):
         serializer_booking = BookingSerializer(booked_class)
         return Response(serializer_booking.data)
 
+    # Delete single booking
     @exceptions
     def delete(self, request, pk):
         booked_class = Booking.objects.get(pk=pk)

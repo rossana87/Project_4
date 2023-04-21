@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { format, parseISO } from 'date-fns'
-import { Link } from 'react-router-dom'
-import { isAuthenticated } from '../../helpers/auth'
+import { Link, useParams } from 'react-router-dom'
+import { isAuthenticated, getToken } from '../../helpers/auth'
+import { useHistory } from 'react-router-dom'
 
 
 //Bootstrap Components
@@ -21,7 +22,9 @@ const Calendar = () => {
   const [bookings, setBookings] = useState([])
   const [filteredBookings, setFilteredBookings] = useState([])
   const [error, setError] = useState('')
+  const [addClass, setAddClass] = useState([])
 
+  const { id } = useParams()
 
   // ! On Mount
   useEffect(() => {
@@ -41,7 +44,7 @@ const Calendar = () => {
     getDate()
   }, [])
 
-
+  // This is for handing the calendar
   const handleButtonChange = (date) => {
     // Filter the bookings array to only include bookings for the selected date
     const filteredBookings = bookings.filter((booking) => booking.date_class === date)
@@ -49,6 +52,37 @@ const Calendar = () => {
     setFilteredBookings(filteredBookings)
   }
 
+
+  //This is for booking one class
+  useEffect(() => {
+    const bookClass = async () => {
+      try {
+        await axios.post('/api/booking/', addClass,
+          {
+            headers: {
+              Authorization: `Bearer ${getToken()}`,
+            },
+          })
+        history.push('/booking')
+      } catch (err) {
+        console.log(err)
+        setError(err.message)
+      }
+    }
+    if (addClass.length > 0) {
+      bookClass()
+    }
+  }, [addClass])
+
+  const handleBookClass = (e) => {
+    e.preventDefault()
+    setAddClass({
+      ...addClass,
+      [e.target.name]: e.target.value,
+    })
+    console.log(e.target.name)
+    console.log(e.target.value)
+  }
 
   return (
     <main className="container">
@@ -74,15 +108,15 @@ const Calendar = () => {
                   <p className="card-text">Studio: {studio}</p>
                   <p className="card-text">Time: {time_class}</p>
                 </div>
-                {/* check if authenticated. if true, show the button book, otherwise show nothing */}
+                {/* check if authenticated. if true, show the button book, otherwise show register */}
                 {isAuthenticated() ?
                   <>
                     <div className="button">
-                      <Button className="btn btn-primary">Book</Button>
+                      <Button className="btn btn-dark" onClick={handleBookClass}>Book</Button>
                     </div>
                   </>
                   :
-                  <Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}>Register to Book</Link>
+                  <Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}>Register</Link>
                 }
               </div>
             )
