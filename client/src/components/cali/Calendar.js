@@ -3,7 +3,7 @@ import axios from 'axios'
 import { format, parseISO } from 'date-fns'
 import { Link, useParams } from 'react-router-dom'
 import { isAuthenticated, getToken } from '../../helpers/auth'
-import { useHistory } from 'react-router-dom'
+
 
 
 //Bootstrap Components
@@ -57,36 +57,34 @@ const Calendar = () => {
   }
 
 
-  //This is for booking one class
-  useEffect(() => {
-    const bookClass = async () => {
-      try {
-        await axios.post('/api/booking/', addClass,
-          {
-            headers: {
-              Authorization: `Bearer ${getToken()}`,
-            },
-          })
-        history.push('/booking')
-      } catch (err) {
-        console.log(err)
-        setError(err.message)
-      }
-    }
-    if (addClass.length > 0) {
-      bookClass()
-    }
-  }, [addClass])
+  // //This is for booking one class
+  // useEffect(() => {
+  //   const getClass = async () => {
+  //     try {
+  //       await axios.post('/api/booking/', addClass,
+  //         {
+  //           headers: {
+  //             Authorization: `Bearer ${getToken()}`,
+  //           },
+  //         })
+  //     } catch (err) {
+  //       console.log(err)
+  //       setError(err.message)
+  //     }
+  //   }
+  //     getClass()
+  //   }
+  // }, [addClass])
 
-  const handleBookClass = (e) => {
-    e.preventDefault()
-    setAddClass({
-      ...addClass,
-      [e.target.name]: e.target.value,
-    })
-    console.log(e.target.name)
-    console.log(e.target.value)
-  }
+  // const handleBookClass = (e) => {
+  //   e.preventDefault()
+  //   setAddClass({
+  //     ...addClass,
+  //     [e.target.name]: e.target.value,
+  //   })
+  //   console.log(e.target.name)
+  //   console.log(e.target.value)
+  // }
 
   return (
     <main className="container">
@@ -116,7 +114,7 @@ const Calendar = () => {
                 {isAuthenticated() ?
                   <>
                     <div className="button">
-                      <Button className="btn btn-dark" onClick={handleBookClass}>Book</Button>
+                      <Button className="btn btn-dark">Book</Button>
                     </div>
                   </>
                   :
