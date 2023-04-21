@@ -23,7 +23,11 @@ const Calendar = () => {
   const [filteredBookings, setFilteredBookings] = useState([])
   const [error, setError] = useState('')
   const [addClass, setAddClass] = useState([])
-
+  const [formFields, setFormFields] = useState({
+    name_class: '',
+    instructor: '',
+    user_id: '',
+  })
   const { id } = useParams()
 
   // ! On Mount
