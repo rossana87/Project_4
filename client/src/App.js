@@ -7,7 +7,7 @@ import Home from './components/Home'
 import Classes from './components/cali/Classes'
 import PageNavbar from './components/common/PageNavbar'
 import PageNotFound from './components/common/PageNotFound'
-import Profile from './components/profile/Profile'
+import Bookings from './components/profile/Bookings'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 
@@ -21,7 +21,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/classes" element={<Classes />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/booking" element={<Bookings />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
 

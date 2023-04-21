@@ -39,7 +39,7 @@ const PageNavbar = () => {
             {/* check if authenticated. if true, show logout and profile, otherwise show login and register links */}
             {isAuthenticated() ?
               <>
-                <Nav.Link to="/profile" as={Link} className={location.pathname === '/profile' ? 'active' : ''}>Profile</Nav.Link>
+                <Nav.Link to="/booking" as={Link} className={location.pathname === '/booking' ? 'active' : ''}>Bookings</Nav.Link>
                 <span className='nav-link' onClick={handleLogOut}>Logout</span>
               </>
               :
