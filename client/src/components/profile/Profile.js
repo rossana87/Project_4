@@ -6,27 +6,41 @@ import { getToken } from '../../helpers/auth'
 const Profile = () => {
 
   const [error, setError] = useState('')
-  const [profile, setProfile] = useState({ cali: [] })
+  const [profileData, setProfileData] = useState({ cali_classes: [] })
 
-  const { userId } = useParams()
+  const { user_id } = useParams()
 
   // ! On Mount
+  useEffect(() => {
+    const getProfile = async () => {
+      try {
+        const { data } = await axios.create({
+          headers: {
+            Authorization: `Bearer ${getToken()}`,
+          },
+        })
+          .get('/api/auth/profile/')
+        setProfileData(data)
+        console.log('PROFILE DATA -> ', data)
+      } catch (err) {
+        console.log(err)
+        setError(err.message)
+      }
+    }
+    getProfile()
+  }, [])
 
 
 
 
 
+  return (
+    <main className="profile-container">
+      <div className="classes-booked">
 
-
-
-
-
-
-
-
-
-
-
-
+      </div>
+      <div></div>
+    </main>
+  )
 }
 export default Profile
