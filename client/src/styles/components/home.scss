@@ -10,11 +10,6 @@
 }
 
 
-// .logo {
-//   margin-top: 10px;
-//   width: 180px;
-// }
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -58,9 +53,9 @@ h1 {
   span {
     display: flex;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
     width: 100%;
-    float: left;
+    float: right;
     margin-top: 20px;
     margin-left: 20px;
     -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
