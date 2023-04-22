@@ -109,7 +109,7 @@ const Calendar = () => {
             return (
               <div key={i} className="card flex-row mb-3">
                 <div className="card-image">
-                  <img src={instructor.profile_image} alt={instructor.instructor_name} />
+                  <img className="profile-image" src={instructor.profile_image} alt={instructor.instructor_name} />
                 </div>
                 <div className="card-body d-flex flex-column">
                   <p className="card-title">Class: {name_class}</p>
