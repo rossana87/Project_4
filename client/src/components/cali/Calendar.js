@@ -57,35 +57,6 @@ const Calendar = () => {
   }
 
 
-  // //This is for booking one class
-  // useEffect(() => {
-  //   const getClass = async () => {
-  //     try {
-  //       await axios.post('/api/booking/', addClass,
-  //         {
-  //           headers: {
-  //             Authorization: `Bearer ${getToken()}`,
-  //           },
-  //         })
-  //     } catch (err) {
-  //       console.log(err)
-  //       setError(err.message)
-  //     }
-  //   }
-  //     getClass()
-  //   }
-  // }, [addClass])
-
-  // const handleBookClass = (e) => {
-  //   e.preventDefault()
-  //   setAddClass({
-  //     ...addClass,
-  //     [e.target.name]: e.target.value,
-  //   })
-  //   console.log(e.target.name)
-  //   console.log(e.target.value)
-  // }
-
   return (
     <main className="container">
       <div className="calendar">
