@@ -60,13 +60,14 @@ const Bookings = () => {
     <main className="profile-container">
       <div className="classes-booked">
         <div className="card-container bookings">
+          <h2>Classes Booked</h2>
           {bookingData.length > 0 &&
             bookingData.map((bookingId) => {
               const { id, cali, instructor, name_class } = bookingId
               return (
                 < div key={id} className="card-body d-flex flex-column">
                   <div className="card-body d-flex flex-column">
-                    <h2>Classes Booked</h2>
+
                     <h4 className="card-title">{name_class} - {instructor}</h4>
                     <p className="card-text">Date: {cali['date_class']}</p>
                     <p className="card-text">Time: {cali['time_class']}</p>
