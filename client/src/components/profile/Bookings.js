@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { getToken } from '../../helpers/auth'
 
 import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
 
 const Bookings = () => {
 
@@ -45,8 +46,8 @@ const Bookings = () => {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-      const updatedBookings = user.filter(bookings => bookings.id !== bookingId)
-      setUser(updatedBookings)
+      const updatedBookings = bookingData.filter(booking => booking.id !== bookingId)
+      setBookingData(updatedBookings)
       setEditedBookings(updatedBookings)
       console.log('UPDATED BOOKINGS ->', updatedBookings)
 
@@ -57,29 +58,27 @@ const Bookings = () => {
   }
 
   return (
-    <main className="profile-container">
-      <div className="classes-booked">
-        <div className="card-container bookings">
-          <h2>Classes Booked</h2>
-          {bookingData.length > 0 &&
-            bookingData.map((bookingId) => {
-              const { id, cali, instructor, name_class } = bookingId
-              return (
-                < div key={id} className="card-body d-flex flex-column">
-                  <div className="card-body d-flex flex-column">
-
-                    <h4 className="card-title">{name_class} - {instructor}</h4>
-                    <p className="card-text">Date: {cali['date_class']}</p>
-                    <p className="card-text">Time: {cali['time_class']}</p>
-                    <p className="card-text">Duration: {cali['duration_class']}</p>
-                    <div>
-                      <Button className="btn btn-dark" onClick={() => handleDelete(bookingId.id)}>Cancel</Button>
-                    </div>
+    <main className="booking-container">
+      <div className="card-container bookings">
+        <Image className="cali-top-image" src="https://res.cloudinary.com/dtu5wu4i9/image/upload/v1682171784/Project%204/team_yscqz2.webp" alt="Cali-Team" />
+        <h2 className="classes-booked">Classes Booked</h2>
+        {bookingData.length > 0 &&
+          bookingData.map((bookingId) => {
+            const { id, cali, instructor, name_class } = bookingId
+            return (
+              < div key={id} className="card-body d-flex flex-column">
+                <div className="card-body d-flex flex-column">
+                  <h5 className="card-title">{name_class} - {instructor}</h5>
+                  <p className="card-text">Date: {cali['date_class']}</p>
+                  <p className="card-text">Time: {cali['time_class']}</p>
+                  <p className="card-text">Duration: {cali['duration_class']}</p>
+                  <div>
+                    <Button className="btn btn-dark" onClick={() => handleDelete(bookingId.id)}>Cancel</Button>
                   </div>
                 </div>
-              )
-            })}
-        </div>
+              </div>
+            )
+          })}
       </div>
     </main>
   )

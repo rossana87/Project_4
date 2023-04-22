@@ -22,12 +22,13 @@ const Calendar = () => {
   const [bookings, setBookings] = useState([])
   const [filteredBookings, setFilteredBookings] = useState([])
   const [error, setError] = useState('')
-  const [addClass, setAddClass] = useState([])
-  const [formFields, setFormFields] = useState({
-    name_class: '',
-    instructor: '',
-    user_id: '',
+  //const [addBookingClass, setAddBookingClass] = useState([])
+  const [bookingFields, setbookingFields] = useState({
+    name_class: 'Cali',
+    instructor: 'Lucy',
+    cali: '5',
   })
+
   const { id } = useParams()
 
   // ! On Mount
@@ -48,13 +49,48 @@ const Calendar = () => {
     getDate()
   }, [])
 
-  // This is for handing the calendar
+  // This is for handling the calendar
   const handleButtonChange = (date) => {
     // Filter the bookings array to only include bookings for the selected date
     const filteredBookings = bookings.filter((booking) => booking.date_class === date)
     // Update the component state with the filtered bookings
     setFilteredBookings(filteredBookings)
   }
+
+  // const addBooking = async () => {
+  //   try {
+  //     await axios.post('/api/booking/', null,
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${getToken()}`,
+  //         },
+  //       })
+  //     //const updatedBookings = [...addBookingClass, bookingFields]
+  //     console.log('booking successful!')
+  //   } catch (err) {
+  //     console.log(err)
+  //     setError(err.message)
+  //   }
+  // }
+
+  const handleBookClass = async (booking) => {
+    console.log('BOOKING FIELDS ->', bookingFields)
+    try {
+      await axios.post('/api/booking/', booking,
+        {
+          headers: {
+            Authorization: `Bearer ${getToken()}`,
+          },
+        })
+      //const updatedBookings = [...bookings, booking]
+
+    } catch (err) {
+      console.log(err)
+      setError(err.message)
+    }
+  }
+
+
 
 
   return (
@@ -69,7 +105,7 @@ const Calendar = () => {
       <div className="card-container">
         {filteredBookings.length > 0 ?
           filteredBookings.map((booking, i) => {
-            const { name_class, instructor, studio, time_class } = booking
+            const { id, name_class, instructor, studio, time_class } = booking
             return (
               <div key={i} className="card flex-row mb-3">
                 <div className="card-image">
@@ -85,7 +121,11 @@ const Calendar = () => {
                 {isAuthenticated() ?
                   <>
                     <div className="button">
-                      <Button className="btn btn-dark">Book</Button>
+                      <Button className="btn btn-dark" onClick={() => handleBookClass({
+                        name_class,
+                        instructor: instructor.instructor_name,
+                        cali: id,
+                      })}>Book</Button>
                     </div>
                   </>
                   :
