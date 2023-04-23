@@ -67,7 +67,7 @@ const Bookings = () => {
             const { id, cali, instructor, name_class } = bookingId
             return (
               < div key={id} className="card-body d-flex flex-column">
-                <div className="card-body d-flex flex-column">
+                <div className="card-body-bookings d-flex flex-column">
                   <h5 className="card-title">{name_class} - {instructor}</h5>
                   <p className="card-text">Date: {cali['date_class']}</p>
                   <p className="card-text">Time: {cali['time_class']}</p>

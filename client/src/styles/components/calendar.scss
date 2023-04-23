@@ -18,10 +18,10 @@
 
   .card-body {
     justify-content: center;
-    align-items: center;
+
   }
 
-  .card-image {
+  .instructor {
     display: inline-block;
     max-width: 90%;
     padding-left: 0px;
@@ -30,6 +30,14 @@
 
   .profile-image {
     width: 50%;
+  }
+
+  .link-image {
+    width: 70%;
+  }
+
+  .card-text {
+    margin-bottom: 8px;
   }
 
   .button,
