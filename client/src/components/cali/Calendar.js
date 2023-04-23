@@ -57,22 +57,7 @@ const Calendar = () => {
     setFilteredBookings(filteredBookings)
   }
 
-  // const addBooking = async () => {
-  //   try {
-  //     await axios.post('/api/booking/', null,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${getToken()}`,
-  //         },
-  //       })
-  //     //const updatedBookings = [...addBookingClass, bookingFields]
-  //     console.log('booking successful!')
-  //   } catch (err) {
-  //     console.log(err)
-  //     setError(err.message)
-  //   }
-  // }
-
+  //This is to handle to button Book
   const handleBookClass = async (booking) => {
     console.log('BOOKING FIELDS ->', bookingFields)
     try {
@@ -82,7 +67,6 @@ const Calendar = () => {
             Authorization: `Bearer ${getToken()}`,
           },
         })
-      //const updatedBookings = [...bookings, booking]
 
     } catch (err) {
       console.log(err)
@@ -108,8 +92,8 @@ const Calendar = () => {
             const { id, name_class, instructor, studio, time_class } = booking
             return (
               <div key={i} className="card flex-row mb-3">
-                <div className="card-image">
-                  <img src={instructor.profile_image} alt={instructor.instructor_name} />
+                <div className="card-image instructor">
+                  <img className="link-image" src={instructor.profile_image} alt={instructor.instructor_name} />
                 </div>
                 <div className="card-body d-flex flex-column">
                   <p className="card-title">Class: {name_class}</p>
