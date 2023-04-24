@@ -46,7 +46,7 @@ const Login = () => {
       <Container className="form-wrapper-login">
         <Row>
           <Col as="form" xs={{ span: 10, offset: 1 }} sm={{ span: 8, offset: 2 }} md={{ span: 6, offset: 3 }} onSubmit={handleSubmit}>
-            <h1 className='display-6 text-center'>Login</h1>
+            <h1 className='display-6 text-center login'>Login</h1>
             {/* Email */}
             <label htmlFor="email">Email</label>
             <input type="email" name="email" onChange={handleChange} value={formFields.email} />

@@ -45,7 +45,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 70px;
+  font-size: 65px;
   text-transform: uppercase;
   animation-iteration-count: infinite;
   justify-content: center;
@@ -74,11 +74,11 @@ h1 span {
 
   &:first-child {
     animation-delay: 1.6s;
+    font-size: 50px;
   }
 
   &:last-child {
     animation-delay: 1.4s;
-    // text-decoration: underline wavy #bc9979;
   }
 }
 
