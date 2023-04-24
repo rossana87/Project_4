@@ -7,8 +7,6 @@ import { isAuthenticated, getToken } from '../../helpers/auth'
 
 
 //Bootstrap Components
-import Carousel from 'react-bootstrap/Carousel'
-import CarouselControl from 'react-bootstrap/Carousel'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
@@ -22,7 +20,7 @@ const Calendar = () => {
   const [bookings, setBookings] = useState([])
   const [filteredBookings, setFilteredBookings] = useState([])
   const [error, setError] = useState('')
-  //const [addBookingClass, setAddBookingClass] = useState([])
+  // const [isBooked, setIsBooked] = useState(false)
   const [bookingFields, setbookingFields] = useState({
     name_class: 'Cali',
     instructor: 'Lucy',
@@ -57,6 +55,7 @@ const Calendar = () => {
     setFilteredBookings(filteredBookings)
   }
 
+
   //This is to handle to button Book
   const handleBookClass = async (booking) => {
     console.log('BOOKING FIELDS ->', bookingFields)
@@ -67,7 +66,7 @@ const Calendar = () => {
             Authorization: `Bearer ${getToken()}`,
           },
         })
-
+      // setIsBooked(true)
     } catch (err) {
       console.log(err)
       setError(err.message)

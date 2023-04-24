@@ -10,7 +10,6 @@ const Bookings = () => {
 
   const [error, setError] = useState('')
   const [bookingData, setBookingData] = useState([])
-  // const [deleteIdBooking, setDeleteIdBooking] = useState('')
   const [user, setUser] = useState([])
   const [editedBookings, setEditedBookings] = useState([])
 
