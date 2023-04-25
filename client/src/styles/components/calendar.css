@@ -1,0 +1,42 @@
+.calendar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.calendar .button-calendar {
+  margin-right: 5px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-container .card-body {
+  justify-content: center;
+}
+.card-container .instructor {
+  display: inline-block;
+  max-width: 90%;
+  padding-left: 0px;
+}
+.card-container .link-image {
+  width: 70%;
+}
+.card-container .card-text {
+  margin-bottom: 8px;
+}
+.card-container .button,
+.card-container a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.card-container a {
+  text-decoration: none;
+}
+.card-container .no-booking {
+  display: block;
+  margin: 0 auto;
+}/*# sourceMappingURL=calendar.css.map */

@@ -1,15 +1,16 @@
 .cali-top-image {
   display: flex;
   width: 100%;
-  height: 500px;
-  background-size: contain;
-  background-position: center;
-  max-width: 100%;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
+}
+
+.card-header {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .containerNavBar {
@@ -18,6 +19,8 @@
 
 .container-header {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -28,4 +31,69 @@
   margin-left: 20px;
   margin-right: 20px;
   text-justify: inter-word;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 65px;
+  text-transform: uppercase;
+  animation-iteration-count: infinite;
+  justify-content: center;
+}
+h1 span {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  width: 100%;
+  float: right;
+  margin-top: 20px;
+  margin-left: 20px;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+h1 span {
+  animation-delay: 1s;
+}
+h1 span:first-child {
+  animation-delay: 1.6s;
+  font-size: 45px;
+}
+h1 span:last-child {
+  animation-delay: 1.4s;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
 }/*# sourceMappingURL=home.css.map */

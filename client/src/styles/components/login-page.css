@@ -1,0 +1,36 @@
+.login-page {
+  display: flex;
+}
+.login-page .form-wrapper-login {
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681896575/Project%204/Lucy10_lpd5qa.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 40%;
+}
+.login-page form {
+  padding: 40px;
+}
+.login-page form label {
+  display: block;
+  color: white;
+}
+.login-page form .login {
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+.login-page form input,
+.login-page form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 4px;
+}
+.login-page form button {
+  color: white;
+  font-weight: bold;
+}/*# sourceMappingURL=login-page.css.map */
