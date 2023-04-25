@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;0,700;1,500&display=swap");
 .site-wrapper {
   display: flex;
   flex-direction: column;
@@ -22,13 +22,19 @@ body {
   color: #3e3939;
 }
 
-#cali-top-image {
+.cali-top-image {
   display: flex;
   width: 100%;
-  height: 500px;
-  background-size: contain;
-  background-position: center;
-  max-width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .containerNavBar {
@@ -37,6 +43,8 @@ body {
 
 .container-header {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -49,55 +57,209 @@ body {
   text-justify: inter-word;
 }
 
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 65px;
+  text-transform: uppercase;
+  animation-iteration-count: infinite;
+  justify-content: center;
+}
+h1 span {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  width: 100%;
+  float: right;
+  margin-top: 20px;
+  margin-left: 20px;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+h1 span {
+  animation-delay: 1s;
+}
+h1 span:first-child {
+  animation-delay: 1.6s;
+  font-size: 45px;
+}
+h1 span:last-child {
+  animation-delay: 1.4s;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
+}
 .register-page {
   display: flex;
-  flex-wrap: wrap;
+}
+.register-page .form-wrapper {
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681851244/Project%204/Lucy6_w1wprp.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 60%;
+}
+.register-page form {
+  padding: 20px;
+}
+.register-page form label {
+  display: block;
+  color: white;
+}
+.register-page form h1 {
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.register-page form input,
+.register-page form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 4px;
+}
+.register-page form button {
+  color: white;
+  font-weight: bold;
+}
+
+.login-page {
+  display: flex;
+}
+.login-page .form-wrapper-login {
+  align-items: center;
+  background-image: url("https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681896575/Project%204/Lucy10_lpd5qa.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 40%;
+}
+.login-page form {
+  padding: 40px;
+}
+.login-page form label {
+  display: block;
+  color: white;
+}
+.login-page form .login {
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+.login-page form input,
+.login-page form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 4px;
+}
+.login-page form button {
+  color: white;
+  font-weight: bold;
+}
+
+.calendar {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.calendar .button-calendar {
+  margin-right: 5px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-container .card-body {
+  justify-content: center;
+}
+.card-container .instructor {
+  display: inline-block;
+  max-width: 90%;
+  padding-left: 0px;
+}
+.card-container .link-image {
+  width: 70%;
+}
+.card-container .card-text {
+  margin-bottom: 8px;
+}
+.card-container .button,
+.card-container a {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin: 30px;
 }
-.register-page .form-container {
-  flex-basis: 50%;
-  max-width: 50%;
-  padding: 0 15px;
+.card-container a {
+  text-decoration: none;
 }
-.register-page .form-container h1 {
-  text-align: center;
-}
-.register-page .form-container label {
+.card-container .no-booking {
   display: block;
+  margin: 0 auto;
+}
+
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  background-position: center;
+  background-size: cover;
+}
+.booking-container .classes-booked {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.booking-container .card-body-bookings {
+  align-items: center;
+}
+.booking-container .card-text {
+  margin-top: 5px;
   margin-bottom: 5px;
 }
-.register-page .form-container input {
-  display: block;
-  width: 100%;
-  padding: 10px;
+.booking-container .btn {
+  margin-top: 0px;
   margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-.register-page .form-container button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: black;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-.register-page .form-container .text-danger {
-  color: red;
-}
-.register-page .image-register {
-  flex-basis: 50%;
-  max-width: 50%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 * {

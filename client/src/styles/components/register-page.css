@@ -10,11 +10,16 @@
   width: 60%;
 }
 .register-page form {
-  border-radius: 8px;
   padding: 20px;
 }
 .register-page form label {
   display: block;
+  color: white;
+}
+.register-page form h1 {
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
 }
 .register-page form input,
 .register-page form textarea {
@@ -22,4 +27,9 @@
   margin-bottom: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 5px;
+  border-radius: 4px;
+}
+.register-page form button {
+  color: white;
+  font-weight: bold;
 }/*# sourceMappingURL=register-page.css.map */

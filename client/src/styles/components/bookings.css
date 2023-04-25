@@ -1,0 +1,24 @@
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  background-position: center;
+  background-size: cover;
+}
+.booking-container .classes-booked {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.booking-container .card-body-bookings {
+  align-items: center;
+}
+.booking-container .card-text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.booking-container .btn {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=bookings.css.map */
