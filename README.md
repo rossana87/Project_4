@@ -1,4 +1,4 @@
-# SEI Project 4: Cali-Kulture
+# ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) SEI Project 4: Cali-Kulture
 
 ## Overview
 The last project of the Software Engineering immersive course at General Assembly London was a full-stack solo project built in Python Django API and Django REST framework to serve data from a Postgres database in the back-end and consuming via a front-end built in React.js.
