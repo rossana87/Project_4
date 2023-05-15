@@ -12,7 +12,7 @@ The last project of the Software Engineering immersive course at General Assembl
 * Be deployed online so it's publicly accessible
 
 ## Deployment
-<a href="https://cali-kulture.herokuapp.com/ " target="_blank">Cali-Kulture</a>
+<a href="https://cali-kulture.herokuapp.com/ ">Cali-Kulture</a>
 
 ## Timeframe
 
