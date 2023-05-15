@@ -60,7 +60,7 @@ This was a solo project and the timeframe was 1.5 weeks.
 * `cd client` to go to the frontend directory
 * `npm install` to install all the front-end dependencies
 * Run the following command to run the serve in the front-end  `npm run start`
-* Go back to the main directory with `cd ..` or split the terminal at the bottom and run `python manage.py` runserver to run the server in the back-end
+* Go back to the main directory with `cd ..` or split the terminal at the bottom and run `python manage.py runserver` to run the server in the back-end
 
 ## Planning
 
