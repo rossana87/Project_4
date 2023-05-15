@@ -18,7 +18,6 @@ The last project of the Software Engineering immersive course at General Assembl
 
 This was a solo project and the timeframe was 1.5 weeks.
 
-
 ## Technologies used:
 **Planning:**
 
@@ -67,7 +66,7 @@ This was a solo project and the timeframe was 1.5 weeks.
 
 One of my main hobbies is Calisthenics and as we were all going solo for the last project I decided to build a Calisthenics booking app, named Cali-Kulture, which is the real name of the community that I belong to. Our last project had to be a full-stack app built in Python Django API and Django REST framework to serve data from a Postgres database in the back-end and consuming via a front-end built in React.js.
 
-The wireframe was created in Excalidraw and the main plan was to have a landing page with a nav bar that included the Cali-Kulture log on the left hand side and classes, login and registration on the right handside.
+The wireframe was created in Excalidraw and the main plan was to have a landing page with a navigation bar that included the Cali-Kulture log on the left hand side and classes, login and registration on the right handside.
 I am a big fan of minimalistic websites, for this reason I decided to make the home page very simple, which included a banner of my instructors, a header and a description of what Calisthenics is.
 From the navbar, the user is able to find classes of the day through the calendar, under the tab classes, and book them only if they are registered. Classes can also be cancelled from here and from the booking page as well.
 There is an about page that will explain how Calisthenics was born and at the bottom I would like to include their instagram with a React package.
@@ -80,15 +79,15 @@ While below there is the Profile, Login and Register page.
 
 ![](https://res.cloudinary.com/dtu5wu4i9/image/upload/v1683805440/Project%204/project-4-readme-google-docs-2_k5vw1a.png)
 
-However, before creating the wireframe, I created the different relationships in a diagram. This shows the Cali schema, which are the classes and here we have all the information related to one class. This has a one to many relationship with the booking as one Cali class can have many bookings. 
+However, before creating the wireframe, I created the different relationships in a diagram. This shows the Cali model, which are the classes and here we have all the information related to one class. This has a one to many relationship with the booking as one Cali class can have many bookings. 
 
 The Instructor model has only the name of the instructor and the profile picture and this schema has a one to many relationship with the Cali model because one instructor can do many classes. 
 
-Then, the User model has one to many relationship with the booking model because one user can make many bookings and same for the Booking model.
+Then, the User model has a one to many relationship with the booking model because one user can make many bookings and same for the Booking model.
 
 ![](https://res.cloudinary.com/dtu5wu4i9/image/upload/v1683805449/Project%204/project-4-readme-google-docs-3_mht8xj.png)
 
-Finally, in Trello I kept track of what I was doing:
+In Trello I kept track of what I was doing:
 
 ![](https://res.cloudinary.com/dtu5wu4i9/image/upload/v1683805454/Project%204/project-4-readme-google-docs-4_rf2imh.png)
 
@@ -98,7 +97,7 @@ Finally, in Trello I kept track of what I was doing:
 
 #### Models
 
-Soon after setting up the project, I created the models per app and registered them in the admin.py file of the app itself. As per the Diagram above, I had a total of four models.
+Soon after setting up the project, I created the models per app and registered them in the admin.py file of the app itself. As per the diagram above, I had a total of four models.
 
 1. Cali Class Model
 
@@ -129,8 +128,8 @@ class Cali(models.Model):
 ```
 
 * The Cali model consisted of the name of the class, studio, time of the class, date of the class and duration of the class.
-* Instructor was a foreign key field on this model that establishes a many to one relationship with the Instructor model app. It also specifies the related name as cali. This field allows each class to have one instructor associated with it and if an instructor is deleted, all related classes will also be deleted due to `on_delete=models.CASCADE`.
-* I created this owner field as well, which has a many to one relationship with the model User. To find out if the user `is_staff`, but I decided not to use it during my project.
+* Instructor was a foreign key field on this model that established a many to one relationship with the Instructor model app. It also specifies the related name as cali. This field allows each class to have one instructor associated with it and if an instructor is deleted, all related classes will also be deleted due to `on_delete=models.CASCADE`.
+* I created this owner field as well, which has a many to one relationship with the model User, to find out if the user `is_staff`, however I decided not to use it during my project.
 
 2. Instructor Class Model
 
@@ -170,7 +169,7 @@ class Booking(models.Model):
         return self.name_class
   ```
 
-* The Booking Model represents a booking made for a cali class and consists of the name of the class and the instructor. `cali` and `user_id` are both a foreign key field that establishes a many to one relationship. `cali` with the Cali model and `user_id` with the User model.
+* The Booking Model shows the classes booked and consists of the name of the class and the instructor. `cali` and `user_id` are both a foreign key field and established a many to one relationship. `cali` with the Cali model and `user_id` with the User model.
 
 4. User Class Model
 
@@ -224,14 +223,14 @@ class JWTAuthentication(BaseAuthentication):
         return (user, token)
 ```
 
-After creating the models, I proceeded with the authentication, which is really important. This block of code checks if the person making the request has provided the necessary token and if it is valid. If everything is successful, it finds the corresponding user and it returns their information along with the token, which will allow them to access the app. 
+After creating the models, I proceeded with the authentication, which is really important. The above block of code checks if the person making the request provided the necessary token and if it is valid. If everything is successful, it finds the corresponding user and it returns their information along with the token, which will allow them to access the app. 
 
 #### Serializers
 
 After creating the models,  I created the serializers for all of them. These serializers play a crucial role in facilitating communication between Django and our PostgreSQL database. Their primary purpose is to handle data conversion.
-In the database, the data is stored in encrypted files, which can be challenging to read. Therefore, it is essential to present the data in a clear format for users accessing the API.
-I opted to display the data in JSON format. When data is submitted to the database, the serializer converts it into the appropriate format for storage. Similarly, when data is retrieved from the database, the serializer deserializes it, transforming it back into JSON format for ease of use.
-Additionally, the serializers perform validation on the data before storing it into the database, ensuring that it meets the specified criteria and constraints.
+In the database the data is stored in encrypted files, which can be challenging to read. Therefore, it is essential to present the data in a clear format for users accessing the API.
+I opted to display the data in JSON format. When the data is submitted to the database, the serializer converts it into the appropriate format for storage. Similarly, when the data is retrieved from the database, the serializer deserializes it, transforming it back into JSON format for ease of use.
+The serializers perform validation on the data before storing it into the database, ensuring that it meets the specified criteria and constraints.
 By employing serializers, I enable efficient data conversion, clarity in data presentation, and adherence to defined data requirements during the interaction between Django and our PostgreSQL database.
 
 1. Cali Serializer
@@ -247,7 +246,7 @@ class CaliSerializer(ModelSerializer):
         fields = '__all__'
 ```
 
-* The Cali Serializer is a serializer class that is responsible for serializing and deserializing instances of the Cali model. This serializer class is used to specify how data should be converted when communicating with the API. The ModelSerializer method automatically generates the fields in the model we pass through. For this reason, I decided to include all of them.
+* The Cali serializer is a serializer class that is responsible for serializing and deserializing instances of the Cali model. This serializer class is used to specify how data should be converted when communicating with the API. The ModelSerializer method automatically generates the fields in the model we pass through. For this reason, I decided to include all of them.
 
 2. User Serializer
 
@@ -282,11 +281,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 ```
 
-* The User Serializer is designed to handle the serialization and deserialization of a user data, including custom validation and password hashing. There is an option for strengthening the password as well, which I commented out for all the testing that I was doing, but it is a good option to have.
-* Afterwards, I hashed the password using Django's in-built make_password function, and stored it back on the data object. This will become the serializer.data property and will ultimately get stored in the database.
+* The User serializer is designed to handle the serialization and deserialization of a user data, including custom validation and password hashing. There is an option for strengthening the password as well, which I commented out for all the testing that I was doing, but it is a good option to have.
+* Then, I hashed the password using Django's in-built make_password function, and stored it back on the data object. This will become the serializer.data property and will ultimately get stored in the database.
 * Finally the User Model will get back with the following fields (id, username, email, first name, last name, password and password confirmation).
 
-In addition to the Serializers, when there is a relationship between the models, such a foreign key, in my case, I can populate related fields to include the related model’s data in the serialization process. This allows me to retrieve and display information from related models in a nested form and provide more comprehensive data.
+In addition to the Serializers, when there is a relationship between the models, such a foreign key in my case, I can populate related fields to include the related model’s data in the serialization process. This allows me to retrieve and display information from related models in a nested form and provide more comprehensive data.
 
 3. Populated Cali Serializer
 
@@ -416,7 +415,7 @@ class LoginView(APIView):
         return Response({'message': f"Welcome back, {user_to_login.username}", 'token': token})
  ```
  
-After registration, the user will be able to login and have access to the views in the app. However, this function checks if the user has already registered by checking if the email is within the database. If this is passed, the POST request will also check the password. Once this is all passed, the user is validated and a JSONWebToken will be given, which is stored into the localStorage through the front-end and passes the `isAuthenticated` permission.
+After registration, the user will be able to login and have access to the views in the app. This function checks if the user has already registered by checking if the email is within the database. If this is passed, the POST request will also check the password. Once this is all passed, the user is validated and a JSONWebToken will be given, which is stored into the localStorage through the front-end and passes the `isAuthenticated` permission.
 
 * Profile View
 
@@ -442,7 +441,7 @@ All registered users have their own profile, where all their booked classes woul
 
 #### URLs
 
-Now I am able to view and make the desired requests for each endpoint and every app has a folder called `url.py` where I had to write them:
+Now I am able to view and make the desired requests for each endpoint and every app has a folder called `url.py` where I wrote them:
 
 ```python 
 urlpatterns = [
@@ -479,7 +478,7 @@ urlpatterns = [
     path('api/auth/', include('users.urls'))
 ]
 ```
-To access them in the front-end, to retrieve data, I will need to use the URLs from above, such as `/api/auth/login/`
+To access them in the front-end, to retrieve data, I only need to use the URLs from above, such as `/api/auth/login/`
 
 ### Front-end
 
@@ -525,7 +524,7 @@ export default App
 
 #### Page Nav Bar
 
-According to my wireframe, I created the Nav Bar. As per code below, I used quite a lot of ternaries, where I am checking if the user is authenticated. If it is, instead of showing Register and Login, it will show Bookings and Logout on the Nav Bar.
+According to my wireframe, I created the navigation bar. As per code below, I used quite a lot of ternaries, where I am checking if the user is authenticated. If it is, instead of showing Register and Login, it will show Bookings and Logout on the Nav Bar.
 
 ```js
 return (
@@ -643,7 +642,7 @@ If the user would like to book a cali class they will need to register to the ap
 
 #### Calendar
 
-In this section, I spent almost a day because I was not sure if I wanted to use a react datepicker,  a bootstrap slider or just some buttons. I tried all of them and in the end I didn’t like the datepicker because it was a monthly calendar and I was looking for a weekly calendar. The slider didn’t make much sense because I had to fetch data from the back-end and the database had only 1 week of data. Therefore, I decided to create some buttons for one week. The only drawback of this choice is that the user will be able to see only this week. 
+In this section, I spent almost a day because I wasn't sure if I wanted to use a react datepicker,  a bootstrap slider or just some buttons. I tried all of them and in the end I didn’t like the datepicker because it was a monthly calendar and I was looking for a weekly calendar. The slider didn’t make much sense because I had to fetch data from the back-end and the database had only 1 week of data. Therefore, I decided to create some buttons for one week. The only drawback of this choice is that the user will be able to see only this week. 
 
 
 ```js
@@ -733,7 +732,7 @@ useEffect(() => {
 
 #### Profile
 
-One of the main challenges has been the Profile page. It was very close to the deadline of the project when I created this page. I made a GET request to the profile API and until that point everything was good. I was able to manipulate the data and every user had a profile page. Only when I was going to insert the button Cancel, I realised that there was an issue in the architecture of the back-end. However, it was too late to change the models now. 
+One of the main challenges has been the Profile page. It was very close to the deadline of the project when I created this page. I made a GET request to the profile API and until that point everything was good. I was able to manipulate the data and every user had a profile page. Only when I inserted the button Cancel, I realised that there was an issue in the architecture of the back-end. However, it was too late to change the models now. 
 
 Most likely the problem is in the `PopulatedUserSerializer`. Due to the `cali_classes`, I was not able to cancel the classes from the user’s profile.
 
@@ -745,6 +744,7 @@ class PopulatedUserSerializer(ModelSerializer):
         model = User
         fields = ('username', 'email', 'cali_classes')
 ```
+
 However, time was against me and I had to find a solution. In the back-end, under booking, I created a function for deleting the classes and one for getting all the bookings. (These are explained in the back-end section).
 Instead, I made a GET request to the booking API. To see this page the user has to be registered and it needs to have an authorization.
 
@@ -769,7 +769,7 @@ useEffect(() => {
 ```
 
 Finally, I was able to see the bookings. I created another function which is responsible for deleting a booking.
-The function below makes a DELETE request to the server with the specified booking ID. If the deletion is successful, it updates the component’s state; otherwise it will show an error.
+The function below makes a DELETE request to the server with the specified booking ID. If it is successful, it updates the component’s state; otherwise it will show an error.
 
 ```js
 const handleDelete = async (bookingId) => {
