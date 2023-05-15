@@ -112,7 +112,7 @@ const Calendar = () => {
                     </div>
                   </>
                   :
-                  <Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}>Register</Link>
+                  <Link to="/register" as={Link} className={location.pathname === '/register' ? 'active' : ''}><Button className="btn btn-dark register-button">Register</Button></Link>
                 }
               </div>
             )
