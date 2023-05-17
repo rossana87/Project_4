@@ -27,8 +27,7 @@ This was a solo project and the timeframe was 1.5 weeks.
 **Front-end:**
 
 * HTML5
-* CSS
-* SASS
+* SCSS / SASS
 * JavaScript (ES6)
 * React.js
 * Axios
