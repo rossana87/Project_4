@@ -59,7 +59,7 @@ const Bookings = () => {
   return (
     <main className="booking-container">
       <div className="card-container bookings">
-        <Image className="cali-top-image" src="https://res.cloudinary.com/dtu5wu4i9/image/upload/v1682171784/Project%204/team_yscqz2.webp" alt="Cali-Team" />
+        <Image className="cali-top-image" src="https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681843338/Project%204/a7b731_ec92dfa1ba624c5bb0f6c562f027c0fb_mv2_zixaew.webp" alt="Cali-Team" />
         <h2 className="classes-booked">Classes Booked</h2>
         {bookingData.length > 0 &&
           bookingData.map((bookingId) => {

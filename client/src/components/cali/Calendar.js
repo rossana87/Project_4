@@ -20,12 +20,12 @@ const Calendar = () => {
   const [bookings, setBookings] = useState([])
   const [filteredBookings, setFilteredBookings] = useState([])
   const [error, setError] = useState('')
-  // const [isBooked, setIsBooked] = useState(false)
   const [bookingFields, setbookingFields] = useState({
     name_class: 'Cali',
     instructor: 'Lucy',
     cali: '5',
   })
+  const [booked, setBooked] = useState(false)
 
   const { id } = useParams()
 
@@ -56,7 +56,7 @@ const Calendar = () => {
   }
 
 
-  //This is to handle to button Book
+  //This is to handle the button Book
   const handleBookClass = async (booking) => {
     console.log('BOOKING FIELDS ->', bookingFields)
     try {
@@ -66,15 +66,12 @@ const Calendar = () => {
             Authorization: `Bearer ${getToken()}`,
           },
         })
-      // setIsBooked(true)
+
     } catch (err) {
       console.log(err)
       setError(err.message)
     }
   }
-
-
-
 
   return (
     <main className="container">
@@ -91,8 +88,8 @@ const Calendar = () => {
             const { id, name_class, instructor, studio, time_class } = booking
             return (
               <div key={i} className="card flex-row mb-3">
-                <div className="card-image instructor">
-                  <img className="link-image" src={instructor.profile_image} alt={instructor.instructor_name} />
+                <div className="card-image">
+                  <img className="profile-image" src={instructor.profile_image} alt={instructor.instructor_name} />
                 </div>
                 <div className="card-body d-flex flex-column">
                   <p className="card-title">Class: {name_class}</p>
@@ -104,11 +101,17 @@ const Calendar = () => {
                 {isAuthenticated() ?
                   <>
                     <div className="button">
-                      <Button className="btn btn-dark" onClick={() => handleBookClass({
-                        name_class,
-                        instructor: instructor.instructor_name,
-                        cali: id,
-                      })}>Book</Button>
+                      <Button className="btn btn-dark" onClick={() => {
+                        handleBookClass({
+                          name_class: name_class,
+                          instructor: instructor.instructor_name,
+                          cali: id,
+                        })
+                        // This is not working due to the architecture
+                        setBooked(true)
+                      }}>
+                        Book
+                      </Button>
                     </div>
                   </>
                   :
