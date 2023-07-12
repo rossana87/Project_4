@@ -88,18 +88,8 @@ const Calendar = () => {
             const { id, name_class, instructor, studio, time_class } = booking
             return (
               <div key={i} className="card flex-row mb-3">
-<<<<<<< HEAD
-                <div className="card-image">
-                  <img className="profile-image" src={instructor.profile_image} alt={instructor.instructor_name} />
-=======
-<<<<<<< HEAD
-                <div className="card-image">
-                  <img className="profile-image" src={instructor.profile_image} alt={instructor.instructor_name} />
-=======
                 <div className="card-image instructor">
                   <img className="link-image" src={instructor.profile_image} alt={instructor.instructor_name} />
->>>>>>> rossana
->>>>>>> development
                 </div>
                 <div className="card-body d-flex flex-column">
                   <p className="card-title">Class: {name_class}</p>
