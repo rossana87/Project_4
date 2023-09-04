@@ -1,5 +1,6 @@
 .login-page {
   display: flex;
+  /* Remove hover effect from all Bootstrap buttons */
 }
 .login-page .form-wrapper-login {
   align-items: center;
@@ -33,4 +34,12 @@
 .login-page form button {
   color: white;
   font-weight: bold;
+  background-color: black;
+  border: 1px solid black;
+}
+.login-page .btn:hover {
+  background-color: black;
+  box-shadow: none;
+  color: white;
+  border: 1px solid black;
 }/*# sourceMappingURL=login-page.css.map */

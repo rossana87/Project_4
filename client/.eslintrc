@@ -5,9 +5,7 @@
     "es6": true,
     "node": true
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -28,10 +26,7 @@
         "properties": "never"
       }
     ],
-    "func-call-spacing": [
-      "error",
-      "never"
-    ],
+    "func-call-spacing": ["error", "never"],
     "keyword-spacing": [
       "error",
       {
@@ -44,10 +39,7 @@
         "int32Hint": false
       }
     ],
-    "object-curly-spacing": [
-      "error",
-      "always"
-    ],
+    "object-curly-spacing": ["error", "always"],
     "eqeqeq": "warn",
     "indent": [
       "error",
@@ -65,14 +57,8 @@
     "no-console": "off",
     "no-fallthrough": "warn",
     "prefer-const": "error",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "never"
-    ],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
     "comma-dangle": [
       "error",
       {
@@ -83,9 +69,7 @@
         "functions": "never"
       }
     ],
-    "react/prop-types": [
-      0
-    ],
+    "react/prop-types": [0],
     "no-unused-vars": 0
   }
 }

@@ -3,7 +3,7 @@
 
   .form-wrapper-login {
     align-items: center;
-    background-image: url('https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681896575/Project%204/Lucy10_lpd5qa.jpg');
+    background-image: url("https://res.cloudinary.com/dtu5wu4i9/image/upload/v1681896575/Project%204/Lucy10_lpd5qa.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,7 +37,15 @@
     button {
       color: white;
       font-weight: bold;
-
+      background-color: black;
+      border: 1px solid black;
     }
+  }
+  /* Remove hover effect from all Bootstrap buttons */
+  .btn:hover {
+    background-color: black;
+    box-shadow: none;
+    color: white;
+    border: 1px solid black;
   }
 }

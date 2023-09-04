@@ -22,9 +22,14 @@ body {
   color: #3e3939;
 }
 
+.home {
+  height: 80vh;
+}
+
 .cali-top-image {
   display: flex;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .hero {
@@ -71,17 +76,7 @@ h1 span {
   justify-content: center;
   font-weight: 500;
   width: 100%;
-  float: right;
   margin-top: 20px;
-  margin-left: 20px;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-  transform: translateY(-50px);
-  opacity: 0;
-  animation-name: titleAnimation;
-  animation-timing-function: ease;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
 }
 
 h1 span {
@@ -123,6 +118,7 @@ h1 span:last-child {
 }
 .register-page {
   display: flex;
+  /* Remove hover effect from all Bootstrap buttons */
 }
 .register-page .form-wrapper {
   align-items: center;
@@ -155,10 +151,19 @@ h1 span:last-child {
 .register-page form button {
   color: white;
   font-weight: bold;
+  background-color: black;
+  border: 1px solid black;
+}
+.register-page .btn:hover {
+  background-color: black;
+  box-shadow: none;
+  color: white;
+  border: 1px solid black;
 }
 
 .login-page {
   display: flex;
+  /* Remove hover effect from all Bootstrap buttons */
 }
 .login-page .form-wrapper-login {
   align-items: center;
@@ -192,6 +197,14 @@ h1 span:last-child {
 .login-page form button {
   color: white;
   font-weight: bold;
+  background-color: black;
+  border: 1px solid black;
+}
+.login-page .btn:hover {
+  background-color: black;
+  box-shadow: none;
+  color: white;
+  border: 1px solid black;
 }
 
 .calendar {
@@ -207,6 +220,9 @@ h1 span:last-child {
   display: flex;
   flex-direction: column;
 }
+.card-container .card {
+  flex-grow: 1;
+}
 .card-container .card-body {
   justify-content: center;
 }
@@ -214,6 +230,10 @@ h1 span:last-child {
   display: inline-block;
   max-width: 90%;
   padding-left: 0px;
+  margin-left: 20px;
+}
+.card-container .profile-image {
+  width: 50%;
 }
 .card-container .link-image {
   width: 70%;
@@ -232,12 +252,17 @@ h1 span:last-child {
 .card-container a {
   text-decoration: none;
 }
+.card-container .register-button {
+  background-color: black;
+  text-decoration: none;
+}
 .card-container .no-booking {
   display: block;
   margin: 0 auto;
 }
 
 .booking-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   color: black;

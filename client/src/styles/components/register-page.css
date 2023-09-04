@@ -1,5 +1,6 @@
 .register-page {
   display: flex;
+  /* Remove hover effect from all Bootstrap buttons */
 }
 .register-page .form-wrapper {
   align-items: center;
@@ -32,4 +33,12 @@
 .register-page form button {
   color: white;
   font-weight: bold;
+  background-color: black;
+  border: 1px solid black;
+}
+.register-page .btn:hover {
+  background-color: black;
+  box-shadow: none;
+  color: white;
+  border: 1px solid black;
 }/*# sourceMappingURL=register-page.css.map */

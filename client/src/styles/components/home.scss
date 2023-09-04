@@ -1,17 +1,11 @@
 .home {
-  height: 100vh;
+  height: 80vh;
 }
 
 .cali-top-image {
   display: flex;
   width: 90%;
   margin: 0 auto;
-  // height: 500px;
-  // background-size: contain;
-  // background-position: center;
-  // max-width: 90%;
-  // margin: 0 auto;
-
 }
 
 .hero {
@@ -23,7 +17,6 @@
   margin-left: 50px;
   margin-right: 50px;
 }
-
 
 .containerNavBar {
   display: flex;
@@ -59,17 +52,18 @@ h1 {
     justify-content: center;
     font-weight: 500;
     width: 100%;
-    float: right;
     margin-top: 20px;
-    margin-left: 20px;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-    transform: translateY(-50px);
-    opacity: 0;
-    animation-name: titleAnimation;
-    animation-timing-function: ease;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
+    // float: right;
+    // margin-top: 20px;
+    // margin-left: 20px;
+    // -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    // clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    // transform: translateY(-50px);
+    // opacity: 0;
+    // animation-name: titleAnimation;
+    // animation-timing-function: ease;
+    // animation-duration: 15s;
+    // animation-iteration-count: infinite;
   }
 }
 
@@ -86,9 +80,7 @@ h1 span {
   }
 }
 
-
 @keyframes titleAnimation {
-
   0% {
     transform: translateY(-50px);
     opacity: 0;
@@ -115,6 +107,5 @@ h1 span {
     opacity: 0;
     -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
     clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
-
   }
 }

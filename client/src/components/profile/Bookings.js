@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 
 const Bookings = () => {
-
   const [error, setError] = useState('')
   const [bookingData, setBookingData] = useState([])
   const [user, setUser] = useState([])
@@ -26,9 +25,6 @@ const Bookings = () => {
         })
           .get('/api/booking/')
         setBookingData(data)
-        console.log('BOOKING DATA -> ', data)
-        console.log('BOOKING ID ->', data[0].id)
-        console.log('Cali time ->', data[0].cali.time_class)
       } catch (err) {
         console.log(err)
         setError(err.message)

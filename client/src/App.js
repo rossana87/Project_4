@@ -1,20 +1,19 @@
-import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import axios from 'axios'
+/* eslint-disable semi */
+/* eslint-disable quotes */
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Components
-import Home from './components/Home'
-import Classes from './components/cali/Classes'
-import PageNavbar from './components/common/PageNavbar'
-import PageNotFound from './components/common/PageNotFound'
-import Bookings from './components/profile/Bookings'
-import Register from './components/auth/Register'
-import Login from './components/auth/Login'
+import Home from "./components/Home";
+import Classes from "./components/cali/Classes";
+import PageNavbar from "./components/common/PageNavbar";
+import PageNotFound from "./components/common/PageNotFound";
+import Bookings from "./components/profile/Bookings";
+import Register from "./components/auth/Register";
+import Login from "./components/auth/Login";
 
 const App = () => {
-
   return (
-    <div className='site-wrapper'>
+    <div className="site-wrapper">
       <BrowserRouter>
         <PageNavbar />
 
@@ -31,7 +30,7 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
